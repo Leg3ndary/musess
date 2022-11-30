@@ -4,6 +4,17 @@ import * as ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
+import theme from './theme';
+
+const rootElement = document.getElementById('root');
+ReactDOM.createRoot(rootElement).render(
+  <>
+    {/* 👇 Here's the script */}
+    <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+    <App />
+  </>,
+)
+
 
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
